@@ -1,16 +1,22 @@
+const ALLPLATES1 = [
+  new Plates(45, 2),
+  new Plates(10, 4)
+];
 
-const ALLPLATES = [
+const ALLPLATES2 = [
+  new Plates(45, 4),
+  new Plates(20, 4),
+  new Plates(10, 4)
+];
+
+const ALLPLATES3 = [
   new Plates(45, 4),
   new Plates(35, 2),
   new Plates(20, 4),
   new Plates(10, 4),
-  new Plates(5, 2)
-]
-
-/*const ALLPLATES = [
-  new Plates(45, 2),
-  new Plates(10, 4)
-];*/
+  new Plates(5, 2),
+  new Plates(2.5, 4)
+];
 
 // 45, 45+10, 45+10+10, 10, 10+10
 
@@ -28,6 +34,10 @@ function Plates (theWeight, theCount) {
       available.push(theWeight);
     }
     return available;
+  };
+
+  thePlates.toString = function () {
+    return `${theCount} x ${theWeight}lbs`;
   };
   
   return thePlates;
@@ -112,8 +122,9 @@ function totalCombinations (plates) {
   return allPlateSetsUnique;
 }
 
-function allPossibleBars () {
-  const allPlateSets = totalCombinations(ALLPLATES);
+function allPossibleBars (plates) {
+  //plates.map()
+  const allPlateSets = totalCombinations(plates);
   const sortedPlateSets = allPlateSets.sort(function(a, b) { return a.getWeight() - b.getWeight(); })
 
   for(let i = 0; i < sortedPlateSets.length; i++) {
