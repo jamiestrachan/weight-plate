@@ -1,0 +1,23 @@
+{
+  "name": "weight-plate",
+  "version": "1.0.0",
+  "description": "A calculator to determine how to load a bar to make a certain weight.",
+  "main": "index.html",
+  "dependencies": {
+    "chai": "^4.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamiestrachan/weight-plate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamiestrachan/weight-plate/issues"
+  },
+  "homepage": "https://github.com/jamiestrachan/weight-plate#readme"
+}
