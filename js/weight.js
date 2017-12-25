@@ -29,39 +29,3 @@ function Weight (theValue, theUnit) {
 
   return theWeight;
 }
-
-function Plate (theWeight, theUnit) {
-  thePlate = {};
-
-  const weight = new Weight(theWeight, theUnit);
-  if (!weight) return null;
-
-  return thePlate;
-}
-
-function PlateSet (thePlate, theCount) {
-  thePlateSet = {};
-
-  return thePlateSet;
-}
-
-function Bar (theWeight) {
-  theBar = {};
-
-  if (!theWeight || theWeight <= 0) {
-    return null;
-  }
-
-  const weight = theWeight;
-
-  return theBar;
-}
-
-function Gym () {
-  theGym = {};
-
-  //theGym.bars = [Bar]
-  //theGym.plates = [PlateSet]
-
-  return theGym;
-}
