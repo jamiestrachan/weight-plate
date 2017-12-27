@@ -1,10 +1,10 @@
-const defaultUnit = "kg";
+const defaultUnit = "lb";
 
 function Weight (theValue, theUnit) {
   theWeight = {};
 
   if (!theValue || theValue <= 0) {
-    return null;
+    return false;
   }
 
   let unitValues = {};
@@ -17,6 +17,9 @@ function Weight (theValue, theUnit) {
     unitValues["kg"] = unitValues["lb"] * 0.45;
   }
 
+  theWeight.defaultUnit = function () {
+    return unit || defaultUnit;
+  };
   theWeight.value = function (unit) {
     return unitValues[unit || defaultUnit];
   };
@@ -29,3 +32,5 @@ function Weight (theValue, theUnit) {
 
   return theWeight;
 }
+
+module.exports = Weight;
